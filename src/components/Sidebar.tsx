@@ -206,7 +206,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isMobile = false, isOpen = true, onCl
               onClick={onClose}
             />
             <motion.aside
-              className="fixed left-0 top-0 bottom-0 w-72 max-w-[80vw] z-50 bg-white dark:bg-gray-900 shadow-xl overflow-hidden"
+              className="fixed left-0 top-0 bottom-0 w-64 max-w-[80vw] z-50 bg-white dark:bg-gray-900 shadow-xl overflow-hidden"
               variants={sidebarVariants}
               initial="closed"
               animate="open"
@@ -221,7 +221,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isMobile = false, isOpen = true, onCl
   }
 
   return (
-    <aside className="hidden md:flex flex-col w-72 bg-white/90 dark:bg-gray-900/90 backdrop-blur-lg border-r border-gray-200 dark:border-gray-800 h-screen sticky top-0 z-30">
+    <aside className="hidden md:flex flex-col w-64 bg-white/90 dark:bg-gray-900/90 backdrop-blur-lg border-r border-gray-200 dark:border-gray-800 h-screen sticky top-0 z-30">
       {renderSidebarContent()}
     </aside>
   );

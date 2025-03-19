@@ -122,15 +122,15 @@ const Memories: React.FC = () => {
           >
             <a 
               href="/memories/create" 
-              className="btn bg-gradient-to-r from-primary-500 to-secondary-500 text-white shadow-md hover:shadow-lg inline-flex items-center"
+              className="btn bg-gradient-to-r from-primary-500 to-secondary-500 text-white shadow-md hover:shadow-lg inline-flex items-center px-8 py-4 text-xl rounded-2xl"
             >
               <svg 
-                width="20" 
-                height="20" 
+                width="24" 
+                height="24" 
                 viewBox="0 0 24 24" 
                 fill="none" 
                 xmlns="http://www.w3.org/2000/svg"
-                className="mr-2"
+                className="mr-3"
               >
                 <path 
                   d="M12 5V19" 
