@@ -2,7 +2,10 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/memories": "pages/memories.js",
+  "/memories/[id]": "pages/memories/[id].js",
+  "/": "pages/index.js",
   "/about": "pages/about.js",
   "/memories/create": "pages/memories/create.js",
-  "/memories": "pages/memories.js"
+  "/404": "pages/404.js"
 }

@@ -24,61 +24,29 @@ const AboutUs = () => {
     }
   };
   
-  // 团队成员数据
-  const teamMembers = [
-    {
-      id: 1,
-      name: '张明',
-      role: '创始人',
-      bio: '拥有20年软件开发经验，曾在多家知名科技公司担任技术领导职位。致力于将技术与人文关怀相结合，让科技更有温度。',
-      imageUrl: '/images/avatars/member1.jpg'
-    },
-    {
-      id: 2,
-      name: '李华',
-      role: '产品经理',
-      bio: '资深产品经理，专注于老年用户体验设计。深入研究老年人数字需求，打造简单易用的产品体验。',
-      imageUrl: '/images/avatars/member2.jpg'
-    },
-    {
-      id: 3,
-      name: '王芳',
-      role: 'UI设计师',
-      bio: '10年设计经验，专注于适老化界面设计。多次获得设计大奖，相信设计可以改变生活，让科技更有人情味。',
-      imageUrl: '/images/avatars/member3.jpg'
-    },
-    {
-      id: 4,
-      name: '刘伟',
-      role: '技术总监',
-      bio: '全栈开发专家，热衷于探索新技术并应用于实际产品。致力于打造高质量、高性能的数字产品。',
-      imageUrl: '/images/avatars/member4.jpg'
-    }
-  ];
-
   // 里程碑数据
   const milestones = [
     {
       id: 1,
-      year: '2020',
+      year: '2025',
       title: '项目启动',
       description: '时光胶囊项目正式启动，我们开始收集用户需求和市场调研。'
     },
     {
       id: 2,
-      year: '2021',
+      year: '1.0版',
       title: '第一版发布',
       description: '时光胶囊1.0版本发布，提供基础的记忆存储和分享功能。'
     },
     {
       id: 3,
-      year: '2022',
+      year: '2.0版',
       title: '功能扩展',
       description: '添加AI智能回忆整理、家庭分享和多媒体支持等功能。'
     },
     {
       id: 4,
-      year: '2023',
+      year: '3.0版',
       title: '全新设计',
       description: '推出全新界面设计，优化用户体验，特别关注老年用户的使用便捷性。'
     }
@@ -227,62 +195,6 @@ const AboutUs = () => {
               帮助人们连接过去，珍视当下，憧憬未来。
             </p>
           </motion.div>
-        </motion.div>
-      </section>
-      
-      {/* 团队介绍 */}
-      <section className="mb-16">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl font-bold mb-4">我们的团队</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            一群热爱创新、专注用户体验的专业人士，致力于为您创造价值
-          </p>
-        </motion.div>
-        
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={staggerContainer}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
-        >
-          {teamMembers.map((member) => (
-            <motion.div
-              key={member.id}
-              variants={fadeInUp}
-              className="card-enhanced p-0 overflow-hidden"
-            >
-              <div className="relative h-64 w-full bg-gray-100">
-                <div className="absolute inset-0 flex items-center justify-center bg-primary-50">
-                  <div className="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center text-primary-600 text-2xl font-bold">
-                    {member.name.charAt(0)}
-                  </div>
-                </div>
-                <Image
-                  src={member.imageUrl}
-                  alt={member.name}
-                  fill
-                  className="object-cover"
-                  onError={(e) => {
-                    // 如果图片加载失败，隐藏图片元素
-                    const target = e.target as HTMLImageElement;
-                    target.style.display = 'none';
-                  }}
-                />
-              </div>
-              <div className="p-5">
-                <h3 className="text-xl font-medium mb-1">{member.name}</h3>
-                <p className="text-primary-500 mb-3">{member.role}</p>
-                <p className="text-gray-600 text-sm">{member.bio}</p>
-              </div>
-            </motion.div>
-          ))}
         </motion.div>
       </section>
       
